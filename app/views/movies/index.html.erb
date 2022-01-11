@@ -2,7 +2,7 @@
   <section class="movie">
     <div class="image">
       <%= image_tag movie.image_file_name %>
-    <div>
+    </div>
     <div class="summary">
       <h2>
         <%= link_to movie.title, movie %>
@@ -10,6 +10,9 @@
       <h3>
         <%= total_gross(movie) %>
       </h3>
+      <span class="star">
+       <%= average_stars(movie) %>
+      </span>
       <p>
         <%= truncate(movie.description, length: 150, separator: ' ') %>
       </p>
