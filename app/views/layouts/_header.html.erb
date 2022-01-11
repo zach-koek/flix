@@ -1,10 +1,15 @@
   <header>
   <nav>
     <%= link_to(image_tag("logo"), root_path) %>
-    <ul>
+    <ul class="left">
       <li>
         <div> <%= link_to("All Movies", movies_path) %></div>
       </li>
+    </ul>
+    <ul class="right">
+      <li>
+        <%= link_to("Sign Up", signup_path) %>
+      <li>
     </ul>
   </nav>
 </header>
