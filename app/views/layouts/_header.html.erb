@@ -11,6 +11,9 @@
         <li>
           <%= link_to current_user.name, current_user %>
         </li>
+         <li>
+          <%= link_to "Sign Out", session_url, method: :delete, class: "button" %>
+        </li>
       <% else %>
         <li>
           <%= link_to "Sign Up", signup_path, class: "button" %>
