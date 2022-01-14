@@ -27,6 +27,17 @@
       </p>
     </li>
   <% end %>
+
+  <% if @favorite_movies.present? %>
+    <h4>Favorite Movies</h4>
+    <ul>
+      <div class="favorite-movies">
+    <% @favorite_movies.each do |movie| %>
+      <%= link_to image_tag(movie.image_file_name), movie %>
+    <% end %>
+      </div>
+    </ul>
+  <% end %>
 </ul>
 
 
