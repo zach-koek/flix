@@ -44,9 +44,6 @@ class UsersController < ApplicationController
         redirect_to movies_url, danger: "Account Successfully Deleted"
     end
 
-
-end
-
 private
 
     def user_params
@@ -55,8 +52,7 @@ private
 
     def require_correct_user
         @user = User.find(params[:id])
-        redirect_to root_url, unless current_user?(@user)
-
+        redirect_to root_url unless current_user?(@user)
     end
 
 end
