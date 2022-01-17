@@ -1,20 +1,18 @@
+<section class="movie-details">
 <div class="image">
     <%= image_tag @movie.image_file_name %>
 <div>
 
-
 <% if current_user %>
 
   <div class="faves">
-    <%= fave_or_unfave_button(@favorite, @movie) %>
-    <div class="count">
-      <%= @movie.fans.size%>
-    </div>
+    <%= fave_or_unfave_button(@movie, @favorite) %>
+  <div class="count">
+    <%= @movie.fans.size%>
   </div>
-
+  </div>
 <% end %>
-
-
+</section>
 
 <section class="movie-details">
   
